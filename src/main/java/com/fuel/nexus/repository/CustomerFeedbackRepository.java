@@ -12,4 +12,6 @@ public interface CustomerFeedbackRepository extends JpaRepository<CustomerFeedba
     List<CustomerFeedback> findByCustomer_Id(Long customerId);
 
     List<CustomerFeedback> findByMessageContainingIgnoreCase(String keyword);
+
+    List<CustomerFeedback> findByCustomerId(Long customerId);
 }

@@ -39,5 +39,10 @@ public class CustomerAccount {
 
     @Column(nullable = false)
     private boolean active = true;
+
+    @Email
+    @NotBlank(message = "Email is required")
+    @Column(nullable = false, length = 100)
+    private String email;
 }
 
